@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Día del Padre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+        img {
+            max-width: 200px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #c51818;
+            font-size: 2.6em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #1824c5;
+            font-size: 1.6em;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 20px 40px;
+            margin: 10px;
+            font-size: 1.8em;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #si {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        #no {
+            background-color: #f44336;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>Feliz día del Padre 🎉</h1>
+    <h2>¿Nos compraras la PS6? 🎮</h2>
+    <img src="ps6.jpg" alt="Una PS6 de verdad">
+    <br>
+    <button id="si" onclick="alert('Buena decisión, voluntaria y sin presiones')">Sí</button>
+    <button id="no">No</button>
+
+    <script>
+        const noBtn = document.getElementById("no");
+
+        noBtn.addEventListener("mouseover", () => {
+            const x = Math.floor(Math.random() * (window.innerWidth - noBtn.clientWidth));
+            const y = Math.floor(Math.random() * (window.innerHeight - noBtn.clientHeight));
+            noBtn.style.left = x + "px";
+            noBtn.style.top = y + "px";
+        });
+    </script>
+</body>
+</html>
